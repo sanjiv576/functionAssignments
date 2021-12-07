@@ -16,7 +16,10 @@ public class PrimeNum {
         System.out.print("Enter the stop/end number : ");
         num = sc.nextInt();
 
+        findPrime(num);
 
+    }
+    public static void findPrime(int num){
         for (int i = 1; i <= num; i++){
             int counter = 0;
             for (int j = 1; j <= i; j++) {
@@ -28,6 +31,5 @@ public class PrimeNum {
                 System.out.println(i);
             }
         }
-
     }
 }

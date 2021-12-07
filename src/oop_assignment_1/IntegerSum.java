@@ -2,7 +2,6 @@
 //integer and the sum of all integers.
 
 package oop_assignment_1;
-import java.util.Arrays;
 import java.util.Scanner;
 import java.lang.*;
 public class IntegerSum {
@@ -24,7 +23,10 @@ public class IntegerSum {
         System.out.print("Enter the five number : ");
         num5 = sc.nextInt();
 
-        int sum = num1 + num2 + num3 + num4 + num5;
-        System.out.println("Sum of " + num1 + ", " + num2 + ", " +  num3 + ", " + num4 +  " and " + num5 + " is : " + sum);
+        int result = addition(num1, num2, num3, num4, num5);
+        System.out.println("Sum of " + num1 + ", " + num2 + ", " +  num3 + ", " + num4 +  " and " + num5 + " is : " + result);
+        }
+        public static int addition(int firstNum, int secondNum, int thirdNum, int fourthNum, int fifthNum){
+        return (firstNum + secondNum + thirdNum + fourthNum + fifthNum);
         }
 }

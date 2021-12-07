@@ -2,29 +2,32 @@ package oop_assignment_1;
 import java.util.Scanner;
 public class Experiment {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String names;
-        System.out.print("Enter a list of names : ");
-        names = sc.nextLine();
-        int namLen = names.length();
-        int spaceCounter = 0;
-
-
-        int letterCounter = 0;
-        for (int i = 0; i <= namLen-1; i++){
-            letterCounter += 1;
-            char letterFetch = names.charAt(i);
-            if (letterFetch == ' '){
-                String wordLength = String.valueOf(letterCounter);
-                spaceCounter += 1;
-                letterCounter = 0;
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the value of n: ");
+        int n = s.nextInt();
+        String[] str = new String[n];
+        System.out.println("Enter strings: ");
+        for(int i = 0; i < n; i++)
+        {
+            str[i] = new String(s.next());
+        }
+        System.out.println(str.getClass().getSimpleName());
+        for(int i = 0; i < n; i++)
+        {
+            for(int j = i+1; j < n; j++)
+            {
+                if(str[i].compareTo(str[j])>0)
+                {
+                    String temp = str[i];
+                    str[i] = str[j];
+                    str[j] = temp;
+                }
             }
         }
-        System.out.println("Space number : " + spaceCounter);
-
-        while (namLen != 0){
-
-            namLen -= 1;
+        System.out.println("Sorted list of strings is:");
+        for(int i = 0; i < n ; i++)
+        {
+            System.out.println(str[i]);
         }
     }
 }

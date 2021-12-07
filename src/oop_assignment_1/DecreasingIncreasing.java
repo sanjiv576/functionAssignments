@@ -23,15 +23,18 @@ public class DecreasingIncreasing {
         System.out.print("Enter the third number : ");
         thirdNum = sc.nextInt();
 
-        if (firstNum < secondNum  && secondNum < thirdNum){
+        arrange(firstNum, secondNum, thirdNum);
+
+    }
+    public static void arrange(int first, int second, int third){
+        if (first < second  && second < third){
             System.out.print("increasing ");
         }
-        else if (firstNum > secondNum && secondNum > thirdNum){
+        else if (first > second && second > third){
             System.out.print("decreasing");
         }
         else {
             System.out.print("Neither increasing nor decreasing order");
         }
-
     }
 }
